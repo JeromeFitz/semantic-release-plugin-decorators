@@ -1,4 +1,4 @@
-name: Generate preview of `semantic-release` changelog
+name: Release preview
 on: [pull_request]
 jobs:
   run-semantic-release-github-pr:
@@ -8,4 +8,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "16"
+      - run: echo $GITHUB_TOKEN
       - run: npx semantic-release-github-pr --debug
