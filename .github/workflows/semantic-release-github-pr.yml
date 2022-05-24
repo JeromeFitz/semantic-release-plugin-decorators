@@ -1,5 +1,5 @@
 name: Generate preview of `semantic-release` changelog
-on: [pull-request]
+on: [pull_request]
 jobs:
   run-semantic-release-github-pr:
     runs-on: ubuntu-latest
