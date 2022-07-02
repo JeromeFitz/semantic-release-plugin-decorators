@@ -1,12 +1,19 @@
 {
   "name": "@jeromefitz/semantic-release-plugin-decorators",
-  "version": "0.0.0-development",
+  "version": "3.1.0",
   "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/jeromefitz/semantic-release-plugin-decorators.git"
+  },
   "scripts": {
     "format": "prettier --write --single-quote --trailing-comma es5",
     "format:all": "yarn format \"./**/*.js\"",
     "precommit": "lint-staged",
-    "test": "jest"
+    "test": "jest",
+    "postpublish": "pinst --enable",
+    "preinstall": "npx only-allow yarn",
+    "prepublishOnly": "pinst --disable"
   },
   "license": "MIT",
   "peerDependencies": {
@@ -17,6 +24,7 @@
     "husky": "^4.2.1",
     "jest": "^25.1.0",
     "lint-staged": "^10.0.4",
+    "pinst": "^3.0.0",
     "prettier": "^1.19.1",
     "semantic-release": "^17.0.1",
     "semantic-release-github-pr": "^6.0.0"

@@ -6,3 +6,4 @@ branches: [
     # x.y.z-develop.1|2|3...
     { "name": "develop" },
   ]
+ci: true
