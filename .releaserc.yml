@@ -1,0 +1,8 @@
+branches: [
+    # x.y.z
+    "master",
+    # x.y.z-canary.1|2|3...
+    { "name": "canary" },
+    # x.y.z-develop.1|2|3...
+    { "name": "develop" },
+  ]
